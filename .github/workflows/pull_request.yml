@@ -1,0 +1,12 @@
+name: Pull Request validation workflow
+
+on: pull_request
+
+jobs:
+  unit-tests:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+      - name: Run tests from Dockerfile
+        run: docker build --progress=plain --target run_tests .
