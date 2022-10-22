@@ -16,7 +16,7 @@ func validateSum(t *testing.T, x int, y int) {
 		t.Errorf("Sum should be commutative")
 	}
 	if Sum(x, y) != correctSum(y, x) {
-		t.Errorf("expected %d but got %d", correctSum(y, x), Sum(x, y))
+		t.Errorf("Expected %d but got %d", correctSum(y, x), Sum(x, y))
 	}
 }
 
