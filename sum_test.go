@@ -1,12 +1,12 @@
-package example
+package template
 
 import "testing"
 
 func TestSum(t *testing.T) {
 	const limit = 100
-	for i := -limit; i <= limit; i += 1 {
-		for j := -limit; j <= limit; j += 1 {
-			validateSum(t, i, j)
+	for x := -limit; x <= limit; x += 1 {
+		for y := -limit; y <= limit; y += 1 {
+			validateSum(t, x, y)
 		}
 	}
 }
@@ -15,11 +15,8 @@ func validateSum(t *testing.T, x int, y int) {
 	if Sum(x, y) != Sum(y, x) {
 		t.Errorf("Sum should be commutative")
 	}
-	if Sum(x, y) != correctSum(y, x) {
-		t.Errorf("Expected %d but got %d", correctSum(y, x), Sum(x, y))
+	expectedSum := x + y
+	if Sum(x, y) != expectedSum {
+		t.Errorf("Expected %d but got %d", expectedSum, Sum(x, y))
 	}
-}
-
-func correctSum(x int, y int) int {
-	return x + y
 }

@@ -1,5 +1,5 @@
-package example
+package template
 
-func Sum(a int, b int) (sum int) {
-	return a + b
+func Sum(x int, y int) (sum int) {
+	return x + y
 }
