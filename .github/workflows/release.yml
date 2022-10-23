@@ -13,6 +13,6 @@ jobs:
       - name: Workdir
         run: cd test/
       - name: Integration tests
-        run: docker build --progress=plain --target=integration_tests --build-arg "${TEMPLATE_PACKAGE_VERSION}" .
+        run: docker build --progress=plain --target=integration_tests --build-arg $TEMPLATE_PACKAGE_VERSION .
         env:
           TEMPLATE_PACKAGE_VERSION: ${{ github.ref_name }}
