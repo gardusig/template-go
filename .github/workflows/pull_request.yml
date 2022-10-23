@@ -8,5 +8,7 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v3
-      - name: Run tests from Dockerfile
+      - name: Build
+        run: docker build --progress=plain --target=build .
+      - name: Unit tests
         run: docker build --progress=plain --target unit_tests .
