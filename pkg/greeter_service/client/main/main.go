@@ -9,19 +9,15 @@ import (
 	"github.com/gardusig/template-go/pkg/greeter_service/model"
 )
 
-const (
-	defaultName = "world"
-)
-
-var (
-	addr = flag.String("addr", "localhost:50051", "the address to connect to")
-	name = flag.String("name", defaultName, "Name to greet")
-)
-
 func main() {
 	flag.Parse()
-	client := client.NewGreeterClient(*addr)
-	r, err := client.Client.SayHello(context.Background(), &model.HelloRequest{Name: *name})
+	client := client.NewGreeterClient("localhost:50051")
+	r, err := client.Client.SayHello(
+		context.Background(),
+		&model.HelloRequest{
+			Name: "world",
+		},
+	)
 	if err != nil {
 		log.Fatalf("error: %v", err)
 	}
