@@ -3,7 +3,7 @@ package client
 import (
 	"log"
 
-	"github.com/gardusig/template-go/pkg/greeter_service/model"
+	"github.com/gardusig/template-go/example/greeter_service/model"
 	"google.golang.org/grpc"
 	"google.golang.org/grpc/credentials/insecure"
 )

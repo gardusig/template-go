@@ -6,8 +6,8 @@ import (
 	"log"
 	"net"
 
-	"github.com/gardusig/template-go/pkg/greeter_service/model"
-	"github.com/gardusig/template-go/pkg/greeter_service/server"
+	"github.com/gardusig/template-go/example/greeter_service/model"
+	"github.com/gardusig/template-go/example/greeter_service/server"
 	"google.golang.org/grpc"
 )
 

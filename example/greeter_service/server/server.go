@@ -4,7 +4,7 @@ import (
 	"context"
 	"log"
 
-	"github.com/gardusig/template-go/pkg/greeter_service/model"
+	"github.com/gardusig/template-go/example/greeter_service/model"
 )
 
 type GreeterServer struct {
