@@ -5,8 +5,8 @@ import (
 	"flag"
 	"log"
 
-	"github.com/gardusig/template-go/example/greeter_service/client"
-	"github.com/gardusig/template-go/example/greeter_service/model"
+	"github.com/gardusig/template-go/example/grpc/client"
+	"github.com/gardusig/template-go/example/grpc/model"
 )
 
 func main() {

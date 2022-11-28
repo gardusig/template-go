@@ -14,7 +14,7 @@
 
 syntax = "proto3";
 
-option go_package = "github.com/gardusig/template-go/example/model";
+option go_package = "github.com/gardusig/template-go/example/grpc/model";
 
 // The greeting service definition.
 service Greeter {
